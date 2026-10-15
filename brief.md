@@ -22,10 +22,19 @@ An emergency responder's mobile application should follow an offline-first appro
 Resource: Android Developers - Build an offline-first app - https://developer.android.com/topic/architecture/data-layer/offline-first
 
 ## Networking
+5G network slicing allows operators to create multiple logical networks over shared physical infrastructure, with each slice configured for different service requirements. A dedicated slice for emergency responders could prioritize critical communications, allocate suitable network resources, and support reliable data exchange during congestion. For example, ambulance teams could receive higher priority than ordinary mobile traffic. However, network slicing alone cannot guarantee uninterrupted service because physical infrastructure and some network resources remain shared.
+
+Resource: 3GPP - 5G System Overview - https://www.3gpp.org/technologies/5g-system-overview
 
 ## Cybersecurity
+According to NIST's updated incident response guidance, preparation includes identifying risks, establishing procedures, and protecting critical systems. During detection, the operator monitors alerts and analyzes suspicious activity. Response involves containing the attack, removing threats, and limiting service disruption. Recovery restores affected systems and verifies normal operations. Lessons learned from the incident support continuous improvement across these activities. For emergency 5G services, these coordinated actions help reduce downtime and protect essential communications.
+
+Resource: NIST SP 800-61 Rev. 3 - Incident Response Recommendations and Considerations for Cybersecurity Risk Management - https://csrc.nist.gov/pubs/sp/800/61/r3/final
 
 ## Data
+A star schema uses a central fact table connected directly to dimension tables, making reporting queries simpler. A snowflake schema normalizes dimensions into multiple related tables, reducing data redundancy but requiring additional joins. For reporting 5G service usage by region and day, a star schema is more suitable. A usage fact table can store service measurements, while region and date dimensions support filtering and aggregation. This structure simplifies daily reporting and dashboard development.
+
+Resource: Microsoft Learn - Dimensions Introduction - https://learn.microsoft.com/en-us/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction
 
 ## Misconception in My Track
 
