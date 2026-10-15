@@ -37,5 +37,7 @@ A star schema uses a central fact table connected directly to dimension tables, 
 Resource: Microsoft Learn - Dimensions Introduction - https://learn.microsoft.com/en-us/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction
 
 ## Misconception in My Track
+A common misconception in software development is that all HTTP requests can be automatically retried without causing problems. In reality, not every HTTP method is idempotent. According to RFC 9110, Section 9.2.2, idempotent methods have the same intended effect when repeated. Methods such as GET, PUT, and DELETE are idempotent, while POST is not guaranteed to be. For an emergency response application, retrying a POST request could create duplicate incident reports. Developers should use appropriate retry policies and duplicate-prevention mechanisms to protect data consistency.
 
 ## Open Question
+How can developers implement reliable retry mechanisms for non-idempotent HTTP requests in emergency response applications? I would investigate how idempotency keys and server-side duplicate detection can prevent repeated operations when network connections fail.
